@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;    
+}
+
+body {
+    background-color: rgba(100, 3, 0, 0.8);
+}
+
+/* Carousel */
+.carousel {
+    padding: 20px 0;
+}
+
+.item img {
+    max-width: 100%;
+    max-height: calc(100vh - 170px);
+    object-fit: contain;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+#thumbnails .col img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 90% -30px;
+}
+
+/* Testo Immagini */
+.text {
+    padding: 0 0.8rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.205);
+    border-radius: 0 0 20px 20px;
+}
+
+/* Contenitore immagini */
+.item {
+    display: none;
+    overflow: hidden;
+}
+
+/* Classe che attiva le immagini */
+.active {
+    display: block;
+}
+
+/* THUMBNAILS */
+.container-thumb {
+    position: fixed;
+    bottom: 0;
+    max-width: 100%;
+    padding: 20px;
+}
+
+#thumbnails {
+    height: 120px;
+    background-color: rgb(23, 23, 23);
+    overflow: hidden;    
+    border: 5px solid;
+}
+
+#thumbnails > .col {
+    top: 50%;
+} 
+
+.thumb {
+    opacity: 0.5;
+}
+
+.active_thumb {
+    opacity: 1;
+}
+
+/* Buttons */
+#prev,
+#next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    font-size: 2rem;    
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.205);
+}
+/* Left button */
+#prev {
+    left: -2px;
+    border-radius: 0 10px 10px 0;
+}
+/* Right button */
+#next {
+    right: -2px;    
+    border-radius: 10px 0 0 10px;
+}
+
+/* Buttons Play-Stop */
+.container-thumb .timebtn {
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    z-index: 9999;
+    width: 6rem;
+}
+
+.container-thumb .timebtn .btn_time {
+    position: absolute;
+    padding: 0.3rem 0.4rem;
+}
+
+.container-thumb .timebtn .timebtn_play {
+    right: 0;
+}
+
+.container-thumb .timebtn .timebtn_stop {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.container-thumb .timebtn .timebtn_prev {
+    left: 0;
+}
