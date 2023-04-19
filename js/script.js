@@ -18,6 +18,7 @@ createApp({
     data() {
         return {
             activeVar: 0,
+            autoscroll: null,
             slides : [
                 {
                     image: 'img/01.webp',
@@ -48,6 +49,10 @@ createApp({
         };   
     },
 
+    created(){
+        this.autoScroll()
+    },
+
     /* ----------------- METHODS ----------------- */
     methods: {
         // Funzione per incrementare
@@ -68,6 +73,19 @@ createApp({
                 
                 this.activeVar = this.slides.length - 1;
             }
+        },
+
+        // Funzione per cambiare immagine THUMB al click
+        changeThumb(x){
+
+            this.activeVar = x
+        },
+
+        // Funzione per cambiare immagine dopo 2 secondi
+        autoScroll(){
+            this.autoscroll = setInterval( () => {
+                this.next()
+            }, 2000 );
         },
     }
 }).mount('#app')
