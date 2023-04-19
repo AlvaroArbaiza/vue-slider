@@ -1,102 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-    <!-- Css -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <title>Vue Slider</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
 
     <div id="app">
 
-        <!-- Carousel -->
-        <div class="container carousel d-flex justify-content-center align-items-center py-4">
-                
-            <div id="slides" class="position-relative p-0 h-100">
+        <div class="container">
+            <div class="slider-wrapper" tabindex="0">
 
-                <div class="container d-flex align-items-center h-100">
-
-                    <img src="./assets/img/05.webp" alt="">
+                <div class="item">
+                    <img src="img/01.webp" alt="Spiderman" />
+                    <div class="text">
+                        <h3>Spiderman</h3>
+                        <p>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
+                            tempore aliquid deleniti aut
+                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
+                            corporis.
+                        </p>
+                    </div>
                 </div>
-                
+
+                <div class="thumbs">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                    <div class="thumb active">
+                        <img src="img/01.webp" alt="Svezia" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/02.webp" alt="Ratchet & Clank" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/03.webp" alt="Fortnite" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/04.webp" alt="Stray" />
+                    </div>
+                    <div class="thumb">
+                        <img src="img/05.webp" alt="Avengers" />
+                    </div>
+                </div>
+
             </div>
         </div>
-        
-        <!-- Thumbnails -->
-        <div class="container container-thumb d-flex justify-content-center">
-    
-            <!-- Buttons Play-Stop -->
-            <div class="p-0 position-absolute timebtn">
-    
-                <button type="button" class="btn_time timebtn_prev btn btn-secondary">
-                    <i class="bi bi-caret-left-fill"></i>
-                </button>
-    
-                <button type="button" class="btn_time timebtn_play btn btn-secondary">
-                    <i class="bi bi-play-fill"></i>
-                </button>
-    
-                <button type="button" class="btn_time timebtn_stop btn btn-dark">
-                    <i class="bi bi-pause-fill"></i>
-                </button>
-            </div>
-    
-            <!-- Images -->
-            <div id="thumbnails" class="row position-relative">
-    
-    
-                <!-- button prev -->                
-                <div class="col p-0 position-absolute">
-    
-                    <span class="btn" id="prev">&#11164;</span>
-                </div>
-                
-                <!-- button next -->                
-                <div class="col p-0 position-absolute">
-    
-                    <span class="btn" id="next">&#11166;</span>
-                </div>
 
-                <div class="container d-flex p-0">
-
-                    <div class="col">
-                        <img src="./assets/img/01.webp" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="./assets/img/02.webp" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="./assets/img/03.webp" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="./assets/img/04.webp" alt="">
-                    </div>
-                    <div class="col">
-                        <img src="./assets/img/05.webp" alt="">
-                    </div>                    
-                </div>
-
-                        
-    
-            </div>
-    
-        </div>
     </div>
-    
-    <!-- Vue Js -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- Main Js -->
-    <script src="./assets/js/main.js"></script>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
