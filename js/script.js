@@ -87,5 +87,13 @@ createApp({
                 this.next()
             }, 2000 );
         },
+
+        // Funzione per fermare l'autoscroll
+        stopAutoScroll(){
+            
+            clearInterval( this.autoscroll)
+
+            this.autoscroll = null;
+        }
     }
 }).mount('#app')

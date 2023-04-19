@@ -17,7 +17,8 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="slides[activeVar].image" :alt="slides[activeVar].title" />
+                    <img :src="slides[activeVar].image" :alt="slides[activeVar].title" 
+                    @mouseover="stopAutoScroll" @mouseleave="autoScroll"/>
                     <div class="text">
                         <h3>{{ slides[activeVar].title }}</h3>
                         <p>
