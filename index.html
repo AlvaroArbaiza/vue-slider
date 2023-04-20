@@ -34,7 +34,7 @@
                     <!-- Ciclo v-for per inserimento immagini THUMBS e ternario per classe active -->
                     <div :class="activeVar == index ? 'thumb active' : 'thumb'" 
                     v-for="(thumb, index) in slides" :key="index">
-                        <img :src="thumb.image" :alt="thumb.title" 
+                        <img :src="'./' + thumb.image" :alt="thumb.title" 
                         @click="changeThumb(index)"/>
                     </div>
                 </div>
